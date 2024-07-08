@@ -106,12 +106,10 @@ Once we SSH to the two EC2 instances we will have something like this:
 2. We have 7 items pushed to the queue, since only 7 items satisfies the condition ( Label = "Car" and Confidence > 80). The queue is created like so:
 3. And the contents of the queues can be obtained by long polling:
 Once we populate the queues we can see how does it look when we run the AWSTextRekognition program on EC2-B instance.
-![Project flow diagram](https://raw.githubusercontent.com/Boro23-wq/AWS-Image-Recognition-Pipeline/master/assets/project-architecture.jpg)
-
-[!After running Object Rekognition Program on EC A](https://github.com/sandraroy3/CloudComputingClass/blob/main/CloudComputing-PgmAssignment-EC2-SQS-S3-Rekognition/assets/EC%20A%20screenshot.png)
+![After running Object Rekognition Program on EC A](https://raw.githubusercontent.com/sandraroy3/CloudComputingClass/main/CloudComputing-PgmAssignment-EC2-SQS-S3-Rekognition/assets/EC%20A%20screenshot.png)
 
 #### VIII. Running program on EC2-B instance (Second EC2 instance):
 1. We run the AWSTextRekognition.jar on EC2-B instance like so:
 2. When instance B finishes, it prints to a file (output.txt), the indexes of the images that have both cars and text, and also prints the actual text in each image next to its index.
 3. The final output stored in output.txt looks like this:
-[!After running Text Rekognition Program on EC B](https://github.com/sandraroy3/CloudComputingClass/blob/main/CloudComputing-PgmAssignment-EC2-SQS-S3-Rekognition/assets/EC%20B%20screenshot.png)
+![After running Text Rekognition Program on EC B](https://raw.githubusercontent.com/sandraroy3/CloudComputingClass/main/CloudComputing-PgmAssignment-EC2-SQS-S3-Rekognition/assets/EC%20B%20screenshot.png)
